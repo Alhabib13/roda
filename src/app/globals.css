@@ -1,0 +1,198 @@
+@import "tailwindcss";
+
+@theme {
+  /* Strictly Dark Blue (#002046 / #1b365d) and White (#ffffff / #f8fafc) */
+  --color-surface: #f8fafc;
+  --color-surface-dim: #e2e8f0;
+  --color-surface-bright: #ffffff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f1f5f9;
+  --color-surface-container: #e2e8f0;
+  --color-surface-container-high: #cbd5e1;
+  --color-surface-container-highest: #94a3b8;
+  --color-on-surface: #002046;
+  --color-on-surface-variant: #334e68;
+  --color-inverse-surface: #002046;
+  --color-inverse-on-surface: #ffffff;
+  --color-outline: #627d98;
+  --color-outline-variant: #cbd5e1;
+  --color-surface-tint: #1b365d;
+  --color-primary: #002046;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #1b365d;
+  --color-on-primary-container: #ffffff;
+  --color-inverse-primary: #ffffff;
+  --color-secondary: #1b365d;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #f1f5f9;
+  --color-on-secondary-container: #002046;
+  --color-tertiary: #002046;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #002046;
+  --color-on-tertiary-container: #002046;
+  --color-error: #002046;
+  --color-on-error: #ffffff;
+  --color-error-container: #f1f5f9;
+  --color-on-error-container: #002046;
+  --color-primary-fixed: #f1f5f9;
+  --color-primary-fixed-dim: #ffffff;
+  --color-on-primary-fixed: #002046;
+  --color-on-primary-fixed-variant: #002046;
+  --color-secondary-fixed: #e2e8f0;
+  --color-secondary-fixed-dim: #cbd5e1;
+  --color-on-secondary-fixed: #002046;
+  --color-on-secondary-fixed-variant: #002046;
+  --color-tertiary-fixed: #f1f5f9;
+  --color-tertiary-fixed-dim: #e2e8f0;
+  --color-on-tertiary-fixed: #002046;
+  --color-on-tertiary-fixed-variant: #002046;
+  --color-background: #f8fafc;
+  --color-on-background: #002046;
+  --color-surface-variant: #e2e8f0;
+
+  /* Spacing Tokens */
+  --spacing-gutter: 1.5rem;
+  --spacing-gutter-mobile: 1rem;
+  --spacing-margin: 2rem;
+  --spacing-margin-mobile: 1rem;
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-space-xl: 2.5rem;
+
+  /* Typography Font Families — All Sans-Serif Poppins */
+  --font-sans: var(--font-poppins), "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-poppins), "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-display-lg: var(--font-poppins), "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-display-lg-mobile: var(--font-poppins), "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-headline-lg: var(--font-poppins), "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-headline-lg-mobile: var(--font-poppins), "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-headline-md: var(--font-poppins), "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-headline-sm: var(--font-poppins), "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-body-lg: var(--font-poppins), "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-body-md: var(--font-poppins), "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-body-sm: var(--font-poppins), "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-label-lg: var(--font-poppins), "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-label-md: var(--font-poppins), "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-label-sm: var(--font-poppins), "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-currency-stat: var(--font-poppins), "Poppins", ui-sans-serif, system-ui, sans-serif;
+
+  /* Typography Font Sizes */
+  --text-display-lg: 40px;
+  --text-display-lg--line-height: 48px;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-lg--font-weight: 700;
+
+  --text-display-lg-mobile: 30px;
+  --text-display-lg-mobile--line-height: 38px;
+  --text-display-lg-mobile--letter-spacing: -0.01em;
+  --text-display-lg-mobile--font-weight: 700;
+
+  --text-headline-lg: 32px;
+  --text-headline-lg--line-height: 40px;
+  --text-headline-lg--letter-spacing: -0.01em;
+  --text-headline-lg--font-weight: 700;
+
+  --text-headline-lg-mobile: 24px;
+  --text-headline-lg-mobile--line-height: 32px;
+  --text-headline-lg-mobile--letter-spacing: 0em;
+  --text-headline-lg-mobile--font-weight: 700;
+
+  --text-headline-md: 24px;
+  --text-headline-md--line-height: 32px;
+  --text-headline-md--letter-spacing: -0.01em;
+  --text-headline-md--font-weight: 600;
+
+  --text-headline-sm: 20px;
+  --text-headline-sm--line-height: 28px;
+  --text-headline-sm--letter-spacing: 0em;
+  --text-headline-sm--font-weight: 600;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-body-lg--letter-spacing: 0em;
+  --text-body-lg--font-weight: 400;
+
+  --text-body-md: 15px;
+  --text-body-md--line-height: 22px;
+  --text-body-md--letter-spacing: 0em;
+  --text-body-md--font-weight: 400;
+
+  --text-body-sm: 13px;
+  --text-body-sm--line-height: 18px;
+  --text-body-sm--letter-spacing: 0em;
+  --text-body-sm--font-weight: 400;
+
+  --text-label-lg: 15px;
+  --text-label-lg--line-height: 20px;
+  --text-label-lg--letter-spacing: 0.01em;
+  --text-label-lg--font-weight: 600;
+
+  --text-label-md: 13px;
+  --text-label-md--line-height: 18px;
+  --text-label-md--letter-spacing: 0.01em;
+  --text-label-md--font-weight: 600;
+
+  --text-label-sm: 11px;
+  --text-label-sm--line-height: 16px;
+  --text-label-sm--letter-spacing: 0.04em;
+  --text-label-sm--font-weight: 700;
+
+  --text-currency-stat: 24px;
+  --text-currency-stat--line-height: 32px;
+  --text-currency-stat--letter-spacing: -0.02em;
+  --text-currency-stat--font-weight: 700;
+}
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+    font-family: var(--font-poppins), "Poppins", ui-sans-serif, system-ui, sans-serif;
+  }
+}
+
+.font-currency-stat,
+.tabular-nums {
+  font-feature-settings: "tnum" 1;
+}
+
+.rounded-DEFAULT {
+  border-radius: 0.25rem;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-6px);
+  }
+  40%,
+  80% {
+    transform: translateX(6px);
+  }
+}
+
+.animate-shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shrink {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+.animate-shrink {
+  animation: shrink 2.8s linear forwards;
+}
